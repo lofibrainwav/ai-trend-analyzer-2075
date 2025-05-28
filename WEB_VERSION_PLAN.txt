@@ -1,0 +1,201 @@
+🚀 AI 트렌드 분석기 웹 버전 개발 계획
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎨 Leonardo da Vinci 2075 Edition - 웹 인터페이스
+
+📋 개발 로드맵
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 Phase 1: 기반 구조 이식 (1-2일)
+├── Next.js 15 + TypeScript 프로젝트 생성
+├── chat-prmpt에서 핵심 컴포넌트 이식
+│   ├── firecrawl-research.tsx → ai-trend-research.tsx
+│   ├── research-workflow.tsx → trend-analysis-workflow.tsx
+│   ├── conversation-canvas.tsx → trend-visualization-canvas.tsx
+│   └── enhanced-research-workflow.tsx → multi-source-research.tsx
+├── shadcn/ui 컴포넌트 전체 이식
+├── Tailwind CSS 설정 및 테마 적용
+└── 기본 레이아웃 구성
+
+🧠 Phase 2: 백엔드 API 통합 (2-3일)
+├── Python 분석 엔진과 Next.js API 연동
+│   ├── /api/youtube-analysis
+│   ├── /api/stealth-crawling
+│   ├── /api/trend-prediction
+│   └── /api/multi-source-research
+├── MySQL 데이터베이스 연동
+├── 실시간 WebSocket 연결
+└── 파일 업로드/다운로드 시스템
+
+📊 Phase 3: 핵심 기능 구현 (3-4일)
+├── YouTube 분석 인터페이스
+│   ├── 키워드 입력 → 영상 검색 → 자막 분석
+│   ├── 실시간 진행률 표시
+│   └── 결과 시각화
+├── 스텔스 크롤링 대시보드
+│   ├── 20+ 소스 선택 인터페이스
+│   ├── 0.3초 간격 클릭 진행 상황
+│   └── 크롤링 결과 실시간 업데이트
+├── 트렌드 분석 캔버스
+│   ├── 드래그 앤 드롭 인터페이스
+│   ├── 데이터 연결선 시각화
+│   └── AI 인사이트 자동 생성
+└── 종합 리포트 생성기
+
+🎨 Phase 4: 고급 UI/UX (2-3일)
+├── Leonardo da Vinci 스타일 디자인 적용
+├── 애니메이션 및 인터랙션 효과
+├── 다크/라이트 테마 지원
+├── 반응형 디자인 (모바일 지원)
+└── 접근성 최적화
+
+🌐 Phase 5: 고급 기능 (3-4일)
+├── 실시간 협업 기능
+├── 분석 결과 공유 시스템
+├── 사용자 맞춤 대시보드
+├── 자동 알림 시스템
+├── 다국어 지원 (한/영)
+└── API 키 관리 시스템
+
+🎯 가져올 핵심 컴포넌트들
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔥 1. Firecrawl Research Component
+- 파일: components/firecrawl-research.tsx (23KB)
+- 용도: 웹 스크래핑 인터페이스
+- 수정: AI 트렌드 분석용으로 커스터마이징
+
+🧠 2. Research Workflow
+- 파일: components/research-workflow.tsx (24KB)
+- 용도: 다단계 리서치 프로세스 관리
+- 수정: YouTube + 크롤링 + 분석 워크플로우
+
+🎨 3. Canvas Interface
+- 파일: components/conversation-canvas.tsx (19KB)
+- 파일: components/canvas-translation-interface.tsx (41KB)
+- 용도: 시각적 데이터 분석 및 연결
+- 수정: 트렌드 데이터 시각화용
+
+🌐 4. Multilingual Support
+- 파일: components/auto-multilingual-output.tsx
+- 파일: components/multilingual-prompt-output.tsx
+- 용도: 한국어/영어 자동 전환
+- 수정: 트렌드 리포트 다국어 생성
+
+⚙️ 5. UI 컴포넌트 라이브러리
+- 폴더: components/ui/ (전체)
+- 용도: shadcn/ui 완전체
+- 수정: AI 트렌드 분석 테마 적용
+
+📊 새로 개발할 컴포넌트들
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎬 YouTubeAnalysisPanel
+├── 키워드 입력 인터페이스
+├── 영상 검색 결과 표시
+├── 자막 추출 진행률
+├── AI 요약 실시간 생성
+└── 트렌드 점수 시각화
+
+🕷️ StealthCrawlingDashboard
+├── 20+ 소스 선택 체크박스
+├── 크롤링 진행 상황 실시간 표시
+├── 0.3초 간격 클릭 애니메이션
+├── 성공/실패 통계
+└── 결과 데이터 프리뷰
+
+📈 TrendVisualizationCanvas
+├── 드래그 앤 드롭 노드 시스템
+├── 데이터 소스 간 연결선
+├── AI 인사이트 자동 배치
+├── 실시간 업데이트 애니메이션
+└── 확대/축소 및 팬 기능
+
+📋 ComprehensiveReportGenerator
+├── 템플릿 선택 인터페이스
+├── 섹션별 편집 기능
+├── 실시간 미리보기
+├── 다양한 내보내기 형식
+└── 공유 링크 생성
+
+🛠️ 기술 스택
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Frontend:
+├── Next.js 15 (App Router)
+├── React 19
+├── TypeScript 5
+├── Tailwind CSS 3.4
+├── shadcn/ui + Radix UI
+├── Framer Motion (애니메이션)
+├── React Hook Form + Zod
+├── Recharts (차트)
+└── Lucide React (아이콘)
+
+Backend API:
+├── Next.js API Routes
+├── Python 분석 엔진 연동
+├── MySQL 데이터베이스
+├── WebSocket (실시간 통신)
+├── File Upload/Download
+└── Authentication (optional)
+
+External APIs:
+├── YouTube Data API v3
+├── Brave Search API
+├── Firecrawl API
+├── OpenAI/Claude API (요약용)
+└── Playwright (서버 크롤링)
+
+🎯 실행 계획
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📅 1주차: 기반 구조
+1. Next.js 프로젝트 생성
+2. chat-prmpt 컴포넌트 이식
+3. 기본 레이아웃 구성
+4. Python 백엔드 API 연동
+
+📅 2주차: 핵심 기능
+1. YouTube 분석 인터페이스
+2. 스텔스 크롤링 대시보드
+3. 실시간 데이터 통신
+4. MySQL 연동 완료
+
+📅 3주차: 고급 기능
+1. 트렌드 시각화 캔버스
+2. 리포트 생성 시스템
+3. 다국어 지원
+4. 사용자 인터페이스 최적화
+
+📅 4주차: 마무리
+1. 성능 최적화
+2. 버그 수정
+3. 배포 준비
+4. 문서화
+
+🎉 예상 결과물
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🌐 웹 애플리케이션:
+- URL: https://ai-trend-analyzer-2075.vercel.app
+- 반응형 디자인 (데스크톱, 태블릿, 모바일)
+- Leonardo da Vinci 스타일 UI/UX
+- 실시간 협업 가능
+
+📊 주요 기능:
+- YouTube 영상 자동 분석
+- 20+ 소스 스텔스 크롤링
+- AI 기반 트렌드 예측
+- 시각적 데이터 캔버스
+- 종합 리포트 자동 생성
+- 다국어 지원 (한/영)
+
+🚀 성능 목표:
+- 초기 로딩: 2초 이내
+- 분석 속도: 평균 30초 이내
+- 동시 사용자: 100명 이상 지원
+- 데이터 처리: 실시간 스트리밍
+
+이제 진짜 2075년 레오나르도 다 빈치급 웹 애플리케이션을 만들 수 있어! 🎨✨
+
+시작할까? 🚀
