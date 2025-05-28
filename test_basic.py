@@ -22,7 +22,7 @@ def test_basic_functionality():
         import mysql.connector
         config = {
             'host': 'localhost',
-            'port': 24,
+            'port': 3306,
             'user': 'root',
             'password': '',
             'database': 'ai_trends_db'

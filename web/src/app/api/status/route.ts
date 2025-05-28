@@ -8,7 +8,7 @@ export async function GET() {
       return new Promise((resolve) => {
         const mysqlProcess = spawn('/Applications/XAMPP/xamppfiles/bin/mysql', [
           '-h', 'localhost',
-          '-P', '24',
+          '-P', '3306',
           '-u', 'root',
           '-e', 'USE ai_trends_db; SELECT COUNT(*) as youtube_count FROM youtube_videos; SELECT COUNT(*) as research_count FROM research_sources; SELECT COUNT(*) as analysis_count FROM trend_analysis;'
         ])

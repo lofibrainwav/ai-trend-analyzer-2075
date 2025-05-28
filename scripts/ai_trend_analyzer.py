@@ -25,7 +25,7 @@ class AITrendAnalyzer:
     def __init__(self):
         self.db_config = {
             'host': 'localhost',
-            'port': 24,
+            'port': 3306,
             'user': 'root',
             'password': '',
             'database': 'ai_trends_db'
